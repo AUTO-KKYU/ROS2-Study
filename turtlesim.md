@@ -14,7 +14,7 @@ $ ros2 pkg executables turtlesim
 $ . ~/ros2_rolling/install/local_setup.bash
 ```
 
-4 Control Turtlesim
+4) Control Turtlesim
 ```sh
 $ ros2 run turtlesim turtle_teleop_key
 ```

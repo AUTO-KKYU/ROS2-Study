@@ -59,6 +59,14 @@ $ ros2 run demo_nodes_py listener
 ### TALKER -> Listener
 ![2024-04-06175040-ezgif com-video-to-gif-converter](https://github.com/AUTO-KKYU/ROS2-Study/assets/118419026/7e0df402-bea3-42ff-9cff-f4190b4b9a85)
 
+---
+## Install Editor (sublime text)
+url sublime text : https://www.sublimetext.com/docs/linux_repositories.html
 
-
+```sh
+$ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
+$ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+$ sudo apt-get update
+$ sudo apt-get install sublime-text
+```
 

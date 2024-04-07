@@ -12,7 +12,7 @@ $ subl ~/.bashrc
  ※ **.bashrc에 들어가고 나서 제일 마지막 부분에 ros2 setup.bash 읽던 source 명령 추가**
  ```sh
 $ echo "ROS2 humble is activated!"
-$ source /opt/ros/humble/serup.bash
+$ source /opt/ros/humble/setup.bash
 ```
 2) bashrc에서 alias 설정
 - alias 지정 연습
@@ -21,7 +21,7 @@ $ alias alias_test="echo \"Alias test\""
 ```
 - alias로 humble 만들기
 ```sh
-$ alias humble="source /opt/ros/humble/serup.bash; echo \"ROS2 humble is activated!\""
+$ alias humble="source /opt/ros/humble/setup.bash; echo \"ROS2 humble is activated!\""
 ```
 - source ~/.bashrc도 alias 하기
 ```sh

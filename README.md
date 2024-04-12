@@ -69,4 +69,28 @@ $ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/s
 $ sudo apt-get update
 $ sudo apt-get install sublime-text
 ```
-
+---
+## Install dev tools 
+```sh
+sudo apt update && sudo apt install -y \
+  python3-flake8-docstrings \
+  python3-pip \
+  python3-pytest-cov \
+  ros-dev-tools
+```
+```sh
+sudo apt install -y \
+   python3-flake8-blind-except \
+   python3-flake8-builtins \
+   python3-flake8-class-newline \
+   python3-flake8-comprehensions \
+   python3-flake8-deprecated \
+   python3-flake8-import-order \
+   python3-flake8-quotes \
+   python3-pytest-repeat \
+   python3-pytest-rerunfailures
+```
+## Install colcon 
+```sh
+sudo apt install python3-colcon-common-extensions
+```

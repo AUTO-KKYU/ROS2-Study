@@ -94,3 +94,29 @@ sudo apt install -y \
 ```sh
 sudo apt install python3-colcon-common-extensions
 ```
+- ros2는 ament 빌드 시스템을 사용하며, colcon을 빌드 툴로 사용
+
+## Package 생성 방법
+```sh
+$ ros2 pkg create [패키지 이름] --build-type [빌드 타입]
+$ ros2 pkg create cmake_pkg --build-type ament_cmake [폴더 이름]
+```
+1) package.xml
+   - ROS2 패키지의 정보를 담은 XML 파일
+   - ROS 메시지 및 서비스를 정의하고 사용하는 데 필요한 의존성 및 그룹 소속을 명시
+   - <build_depend>...</build_depend>
+       - 패키지를 빌드할 때 의존하는 패키지 이름을 적는다 
+   - <exec_depend>...</exec_depend>
+       - 패키지를 실행할 때 의존하는 패키지 이름을 적는다
+   - <member_of_group>...</member_of_group>
+       - 패키지가 속한 그룹을 지정
+
+2) CMakeLists.txt
+   - CMake 빌드 설정 파일
+   - C++ 패키지나 RQt 플러그인의 경우 ament 빌드 시스템에서는 CMake를 사용
+
+3) setup.py
+   - 파이썬 패키지 빌드 설정 파일
+  
+4) setup.cfg
+   - 파이썬 패키지 환경설정 파일

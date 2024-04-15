@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os 
+import glob 
 
 package_name = 'my_first_package'
 
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', glob.glob(os.path.join('launch', '*.launch.py')))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,7 +29,10 @@ setup(
             'turtle_cmd_and_pose = my_first_package.turtle_cmd_and_pose:main',
             'my_service_server = my_first_package.my_service_server:main',
             'helloworld_publisher = my_first_package.helloworld_publisher:main',
-            'helloworld_subscriber = my_first_package.helloworld_subscriber:main'
+            'helloworld_subscriber = my_first_package.helloworld_subscriber:main',
+            'pyqt_turtlebot = my_first_package.pyqt_turtlebot:main',
+            'dist_turtle_action_server = my_first_package.dist_turtle_action_server:main',
+            'my_multi_thread = my_first_package.my_multi_thread:main'
         ],
     },
 )

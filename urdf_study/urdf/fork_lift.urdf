@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot name="fork_lift">
+    <!-- Base Link -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="0.6 0.6 0.05"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.025"/>
+            <material name="gray">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- Pan (Base) Joint -->
+    <joint name="pan_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="pan_link"/>
+        <origin xyz="0 0 0.025"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="300.0" velocity="0.1" lower="-3.14" upper="3.14"/>
+        <dynamics damping="50" friction="1"/>
+    </joint>
+
+    <!-- Pan Link (Base) -->
+    <link name="pan_link">
+        <visual>
+            <geometry>
+                <box size="0.5 0.5 0.1"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.05"/>
+            <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- Tilt (Fork) Joint -->
+    <joint name="tilt_joint" type="revolute">
+        <parent link="pan_link"/>
+        <child link="fork_link"/>
+        <origin xyz="0.2 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="300.0" velocity="1.0" lower="-4.71239" upper="-1.570796"/>
+        <dynamics damping="50" friction="1"/>
+    </joint>
+
+    <!-- Fork Link (Tilt) -->
+    <link name="fork_link">
+        <visual>
+            <geometry>
+                <box size="0.2 0.01 0.4"/>
+            </geometry>
+            <origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="blue">
+                <color rgba="0 0 1 1"/>
+            </material>
+        </visual>
+    </link>
+</robot>

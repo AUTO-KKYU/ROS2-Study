@@ -88,6 +88,25 @@ $ rviz2
 - rqt_graph
 <img src= "https://github.com/AUTO-KKYU/ROS2-Study/assets/118419026/ea7aff7c-87cd-445a-9546-78cbf5c29b5e">
 
+- Terminal 1
+```sh
+$ ros2 launch urdf_tutorial robot_car.launch.py
+```
+
+- Terminal 2
+```sh
+$ rviz2
+```
+
+- Terminal 3
+- 모델의 Joint 부분을 제어
+```sh
+$ ros2 run joint_state_publisher_gui joint_state_publisher_gui 
+```
+
+
+
+
 
 
 

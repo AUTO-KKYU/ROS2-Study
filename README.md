@@ -120,3 +120,27 @@ $ ros2 pkg create cmake_pkg --build-type ament_cmake [폴더 이름]
   
 4) setup.cfg
    - 파이썬 패키지 환경설정 파일
+
+---
+## Install Gazebo
+```sh
+$ sudo apt install ros-humble-gazebo-ros
+```
+- 기타 패키지
+
+```sh
+# ROS2-gazebo 연동을 위한 패키지
+$ sudo apt install ros-humble-gazebo-ros-pkgs
+$ sudo apt install ros-humble-gazebo-ros2-control
+
+# SLAM 관련 패키지 
+$ sudo apt install ros-humble-cartographer
+$ sudo apt install ros-humble-cartographer-ros
+
+# Navigation 관련 패키지
+$ sudo apt install ros-humble-navigation2
+$ sudo apt install ros-humble-nav2-bringup
+
+# ROS2 motion planning 프레임워크
+$ sudo apt-get install ros-humble-moveit
+```

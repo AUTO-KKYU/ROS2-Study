@@ -80,3 +80,14 @@ $ rviz2
 
 4. rqt_graph로 확인
 <img src= "https://github.com/AUTO-KKYU/ROS2-Study/assets/118419026/0d0aa19a-71cf-43cf-a41d-0e70188d2e77">
+
+
+### URDF Autonomour Robot car featute 
+<img src= "https://github.com/AUTO-KKYU/ROS2-Study/assets/118419026/5c04d91d-7f8d-4aea-9ff7-83b6fb249702">
+
+- rqt_graph
+<img src= "https://github.com/AUTO-KKYU/ROS2-Study/assets/118419026/ea7aff7c-87cd-445a-9546-78cbf5c29b5e">
+
+
+
+
